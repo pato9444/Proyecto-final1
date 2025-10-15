@@ -1,88 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrera - Roger Federer</title>
-<meta name="description" content="Carrera profesional de Roger Federer: inicios, era dorada, últimos años y logros destacados.">
-
-<meta property="og:title" content="Roger Federer - Carrera">
-<meta property="og:description" content="Trayectoria profesional de Roger Federer">
-<meta property="og:image" content="images/federer-hero.jpg">
-
-<link rel="stylesheet" href="css/style.css">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Federer - Carrera Profesional</title>
+    <meta name="description" content="Carrera profesional de Roger Federer: inicios, era dorada, últimos años y logros destacados.">
+    
+    <!-- SEO / Social -->
+    <meta property="og:title" content="Roger Federer - Carrera">
+    <meta property="og:description" content="Trayectoria profesional de Roger Federer">
+    <meta property="og:image" content="images/federer-hero.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" as="image" href="images/federer1.jpg">
 </head>
+
 <body class="carrera">
+    <!-- Cabecera -->
+    <header role="banner">
+        <h1>Roger Federer</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <nav role="navigation" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="carrera.html" class="activo">Carrera</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header role="banner">
-<h1>Roger Federer</h1>
-<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-<nav role="navigation" aria-label="Menú principal">
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="biografia.html">Biografía</a></li>
-<li><a href="carrera.html" class="activo">Carrera</a></li>
-<li><a href="estadisticas.html">Estadísticas</a></li>
-<li><a href="galeria.html">Galería</a></li>
-</ul>
-</nav>
-</header>
+    <!-- Contenido principal -->
+    <main>
+        <section class="carrera-container" data-aos="fade-up" aria-labelledby="carrera-title">
+            <h2 id="carrera-title">Trayectoria Profesional</h2>
+            
+            <!-- Introducción -->
+            <p class="intro">
+                Roger Federer es considerado uno de los mejores tenistas de todos los tiempos. 
+                Su carrera abarca más de dos décadas, durante las cuales redefinió la elegancia, 
+                la técnica y la longevidad en el tenis profesional.
+            </p>
 
-<main>
-<section class="carrera-container" data-aos="fade-up" aria-labelledby="carrera-title">
-<h2 id="carrera-title">Trayectoria Profesional</h2>
-<p class="intro">
-Roger Federer es considerado uno de los mejores tenistas de todos los tiempos. Su carrera abarca más de dos décadas, durante las cuales redefinió la elegancia, la técnica y la longevidad en el tenis profesional.
-</p>
+            <!-- Tarjetas de etapas -->
+            <div class="cards">
+                <!-- Inicios -->
+                <article class="card" aria-label="Inicios de Federer">
+                    <img src="images/federer1.jpg" 
+                         alt="Federer en sus inicios" 
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Los Inicios</h3>
+                        <p>Federer comenzó su carrera profesional en 1998. Pronto demostró su talento 
+                           excepcional, destacándose por su técnica y su mentalidad ganadora desde muy joven.</p>
+                    </div>
+                </article>
 
-<div class="cards">
-<article class="card" aria-label="Inicios de Federer">
-<img src="images/federer1.jpg" alt="Federer en sus inicios" loading="lazy">
-<div class="card-content">
-<h3>Los Inicios</h3>
-<p>Federer comenzó su carrera profesional en 1998. Pronto demostró su talento excepcional, destacándose por su técnica y su mentalidad ganadora desde muy joven.</p>
-</div>
-</article>
+                <!-- Era Dorada -->
+                <article class="card" aria-label="Era dorada de Federer">
+                    <img src="images/federer2.jpg" 
+                         alt="Federer en Wimbledon 2009" 
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Era Dorada</h3>
+                        <p>Entre 2003 y 2009 dominó el circuito mundial, ganando 15 Grand Slams y 
+                           siendo número uno durante 237 semanas consecutivas.</p>
+                    </div>
+                </article>
 
-<article class="card" aria-label="Era dorada de Federer">
-<img src="images/federer2.jpg" alt="Federer en Wimbledon 2009" loading="lazy">
-<div class="card-content">
-<h3>Era Dorada</h3>
-<p>Entre 2003 y 2009 dominó el circuito mundial, ganando 15 Grand Slams y siendo número uno durante 237 semanas consecutivas.</p>
-</div>
-</article>
+                <!-- Últimos Años -->
+                <article class="card" aria-label="Últimos años de Federer">
+                    <img src="images/federer3.jpg" 
+                         alt="Federer en Roland Garros 2019" 
+                         loading="lazy">
+                    <div class="card-content">
+                        <h3>Últimos años</h3>
+                        <p>Aunque enfrentó lesiones, continuó compitiendo a alto nivel, alcanzando 
+                           finales de Grand Slam y siendo un referente de longevidad en el tenis profesional.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
-<article class="card" aria-label="Últimos años de Federer">
-<img src="images/federer3.jpg" alt="Federer en Roland Garros 2019" loading="lazy">
-<div class="card-content">
-<h3>Últimos años</h3>
-<p>Aunque enfrentó lesiones, continuó compitiendo a alto nivel, alcanzando finales de Grand Slam y siendo un referente de longevidad en el tenis profesional.</p>
-</div>
-</article>
-</div>
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Sitio de Roger Federer</p>
+        <p>
+            <a href="index.html">Inicio</a> | 
+            <a href="biografia.html">Biografía</a> | 
+            <a href="carrera.html">Carrera</a> | 
+            <a href="estadisticas.html">Estadísticas</a> | 
+            <a href="galeria.html">Galería</a>
+        </p>
+    </footer>
 
-</section>
-</main>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inicialización de animaciones
+        AOS.init({ 
+            duration: 1000, 
+            once: true 
+        });
 
-<footer role="contentinfo">
-<p>&copy; 2025 Sitio de Roger Federer</p>
-<p>
-<a href="index.html">Inicio</a> | 
-<a href="biografia.html">Biografía</a> | 
-<a href="carrera.html">Carrera</a> | 
-<a href="estadisticas.html">Estadísticas</a> | 
-<a href="galeria.html">Galería</a>
-</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 1000, once: true });
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav ul');
-toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
-</script>
+        // Menú móvil
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        toggle.addEventListener('click', () => { 
+            nav.classList.toggle('open'); 
+        });
+    </script>
 
 </body>
 </html>

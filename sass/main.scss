@@ -1,0 +1,25 @@
+// Base
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+
+// Componentes
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/pager';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+
+// Páginas
+@import 'pages/home';
+@import 'pages/biografia';
+@import 'pages/carrera';
+@import 'pages/estadisticas';
+@import 'pages/galeria';
+
+// Utilidades
+@import 'utilities/animations';
+@import 'utilities/helpers';

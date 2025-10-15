@@ -1,0 +1,51 @@
+// Botón de menú
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $color-white;
+    font-size: $font-size-xl;
+    cursor: pointer;
+    padding: $spacing-xs;
+    transition: $transition-base;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: $breakpoint-md) {
+        display: block;
+    }
+}
+
+// Botones generales
+.btn {
+    display: inline-block;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &-primary {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: lighten($color-primary, 10%);
+            transform: translateY(-2px);
+        }
+    }
+
+    &-accent {
+        background-color: $color-accent;
+        color: $color-white;
+
+        &:hover {
+            background-color: lighten($color-accent, 10%);
+            transform: translateY(-2px);
+        }
+    }
+}

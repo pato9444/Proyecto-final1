@@ -1,78 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roger Federer - Estadísticas</title>
-<meta name="description" content="Estadísticas completas de Roger Federer: títulos, finales, partidos ganados y perdidos.">
-
-<meta property="og:title" content="Roger Federer - Estadísticas">
-<meta property="og:description" content="Estadísticas completas de Roger Federer">
-<meta property="og:image" content="images/federer-hero.jpg">
-
-<link rel="stylesheet" href="css/style.css">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Federer - Estadísticas</title>
+    <meta name="description" content="Estadísticas completas de Roger Federer: títulos, finales, partidos ganados y perdidos.">
+    
+    <!-- SEO / Social -->
+    <meta property="og:title" content="Roger Federer - Estadísticas">
+    <meta property="og:description" content="Estadísticas completas de Roger Federer">
+    <meta property="og:image" content="images/federer-hero.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" as="image" href="images/federer-hero.jpg">
 </head>
+
 <body class="estadisticas">
+    <!-- Cabecera -->
+    <header role="banner">
+        <h1>Roger Federer</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <nav role="navigation" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="carrera.html">Carrera</a></li>
+                <li><a href="estadisticas.html" class="activo">Estadísticas</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header role="banner">
-<h1>Roger Federer</h1>
-<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-<nav role="navigation" aria-label="Menú principal">
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="biografia.html">Biografía</a></li>
-<li><a href="carrera.html">Carrera</a></li>
-<li><a href="estadisticas.html" class="activo">Estadísticas</a></li>
-<li><a href="galeria.html">Galería</a></li>
-</ul>
-</nav>
-</header>
+    <!-- Contenido principal -->
+    <main>
+        <section data-aos="fade-up" aria-labelledby="stats-title">
+            <h2 id="stats-title">Estadísticas</h2>
+            
+            <!-- Tabla de estadísticas -->
+            <table aria-describedby="stats-desc">
+                <caption id="stats-desc">Tabla de torneos y resultados de Roger Federer</caption>
+                <thead>
+                    <tr>
+                        <th>Torneo</th>
+                        <th>Títulos</th>
+                        <th>Finales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Grand Slams -->
+                    <tr>
+                        <td>Wimbledon</td>
+                        <td>8</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Australian Open</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>US Open</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Roland Garros</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    
+                    <!-- Otros torneos -->
+                    <tr>
+                        <td>Masters 1000</td>
+                        <td>28</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td>Total ATP</td>
+                        <td>103</td>
+                        <td>157</td>
+                    </tr>
+                    
+                    <!-- Balance general -->
+                    <tr>
+                        <td>Partidos ganados</td>
+                        <td>1251</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Partidos perdidos</td>
+                        <td>275</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-<main>
-<section data-aos="fade-up" aria-labelledby="stats-title">
-<h2 id="stats-title">Estadísticas</h2>
-<table aria-describedby="stats-desc">
-<caption id="stats-desc">Tabla de torneos y resultados de Roger Federer</caption>
-<thead>
-<tr>
-<th>Torneo</th>
-<th>Títulos</th>
-<th>Finales</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Wimbledon</td><td>8</td><td>12</td></tr>
-<tr><td>Australian Open</td><td>6</td><td>7</td></tr>
-<tr><td>US Open</td><td>5</td><td>6</td></tr>
-<tr><td>Roland Garros</td><td>1</td><td>3</td></tr>
-<tr><td>Masters 1000</td><td>28</td><td>47</td></tr>
-<tr><td>Total ATP</td><td>103</td><td>157</td></tr>
-<tr><td>Partidos ganados</td><td>1251</td><td>-</td></tr>
-<tr><td>Partidos perdidos</td><td>275</td><td>-</td></tr>
-</tbody>
-</table>
-</section>
-</main>
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Sitio de Roger Federer</p>
+        <p>
+            <a href="index.html">Inicio</a> | 
+            <a href="biografia.html">Biografía</a> | 
+            <a href="carrera.html">Carrera</a> | 
+            <a href="estadisticas.html">Estadísticas</a> | 
+            <a href="galeria.html">Galería</a>
+        </p>
+    </footer>
 
-<footer role="contentinfo">
-<p>&copy; 2025 Sitio de Roger Federer</p>
-<p>
-<a href="index.html">Inicio</a> | 
-<a href="biografia.html">Biografía</a> | 
-<a href="carrera.html">Carrera</a> | 
-<a href="estadisticas.html">Estadísticas</a> | 
-<a href="galeria.html">Galería</a>
-</p>
-</footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inicialización de animaciones
+        AOS.init({ 
+            duration: 1000, 
+            once: true 
+        });
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 1000, once: true });
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav ul');
-toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
-</script>
+        // Menú móvil
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        toggle.addEventListener('click', () => { 
+            nav.classList.toggle('open'); 
+        });
+    </script>
 
 </body>
 </html>

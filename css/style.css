@@ -1,77 +1,438 @@
-/* =======================================
-   RESET BÁSICO
-======================================= */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Arial', sans-serif; background:#f8f8f8; color:#222; line-height:1.6; scroll-behavior:smooth; overflow-x:hidden;}
-a { text-decoration:none; transition:0.3s;}
-a:focus { outline:2px solid #e63946; outline-offset:3px;}
+/* ===========================================
+   VARIABLES CSS Y CONFIGURACIÓN GLOBAL
+============================================ */
+:root {
+    /* Colores principales */
+    --color-primary: #0d1b2a;
+    --color-accent: #e63946;
+    --color-bg: #f8f8f8;
+    --color-text: #222;
+    --color-white: #fff;
+    
+    /* Sombras */
+    --shadow-small: 0 2px 5px rgba(0,0,0,0.2);
+    --shadow-large: 0 4px 16px rgba(0,0,0,0.15);
+    
+    /* Espaciado y bordes */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --border-radius: 10px;
+    
+    /* Transiciones */
+    --transition: 0.3s ease;
+}
+
+/* Reset básico */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Estilos base */
+body { 
+    font-family: 'Arial', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a { 
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:focus { 
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* ===========================================
+   HEADER Y NAVEGACIÓN PRINCIPAL
+============================================ */
+header { 
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-md) 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-small);
+}
+
+header h1 { 
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navegación */
+nav ul { 
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+nav ul li a { 
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 5px var(--spacing-sm);
+    border-radius: 5px;
+}
+
+nav ul li a:hover, 
+nav ul li a.activo { 
+    background: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.menu-toggle { 
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ===========================================
+   SECCIÓN HERO
+============================================ */
+.hero { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10%;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), 
+    url('../images/federer-hero.jpg') center/cover no-repeat;
+    color: var(--color-white);
+    text-align: center;
+    min-height: 70vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text { 
+    max-width: 600px;
+    margin-top: var(--spacing-md);
+}
+
+.hero-text h2 { 
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    animation: slideUp 1s ease-out;
+}
+
+.hero-text p { 
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.hero img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+}
+
+/* ===========================================
+   SECCIONES GENERALES
+============================================ */
+section { 
+    padding: 50px 10%;
+    animation: fadeIn 1s ease-in;
+}
+
+section h2 { 
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p, 
+section ul { 
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+ul { 
+    list-style: disc inside;
+}
+
+/* ===========================================
+   TABLAS
+============================================ */
+table { 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-small);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+table th, 
+table td { 
+    border: 1px solid #ccc;
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+table th { 
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+table tbody tr:hover { 
+    background: #f0f0f0;
+    transform: scale(1.01);
+    transition: all var(--transition);
+}
+
+/* ===========================================
+   GALERÍA DE IMÁGENES
+============================================ */
+.gallery { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+}
+
+.gallery img { 
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition),
+                box-shadow var(--transition);
+}
+
+.gallery img:hover { 
+    transform: scale(1.1) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* ===========================================
+   FOOTER
+============================================ */
+footer { 
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: 50px;
+    box-shadow: var(--shadow-small);
+}
 
 /* =======================================
-   HEADER Y NAV
+   PÁGINAS ESPECÍFICAS
 ======================================= */
-header { background:#0d1b2a; color:#fff; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.2);}
-header h1 { font-size:2rem; font-weight:bold;}
-nav ul { display:flex; list-style:none; gap:20px;}
-nav ul li a { color:#fff; font-weight:500; padding:5px 10px; border-radius:5px;}
-nav ul li a:hover, nav ul li a.activo { background:#e63946; transform:scale(1.05);}
-.menu-toggle { display:none; background:none; border:none; color:#fff; font-size:2rem; cursor:pointer;}
+/* Biografía */
+body.biografia section { 
+    background: #fff5e6;
+    border-radius: var(--border-radius);
+    padding: 40px 20px;
+}
 
-/* =======================================
-   HERO
-======================================= */
-.hero { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; padding:60px 10%; background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/federer-hero.jpg') center/cover no-repeat; color:#fff; text-align:center; min-height:70vh; animation:fadeIn 1.5s ease-in-out;}
-.hero-text { max-width:600px; margin-top:20px;}
-.hero-text h2 { font-size:2.5rem; margin-bottom:20px; animation:slideUp 1s ease-out;}
-.hero-text p { margin-bottom:15px; font-size:1.1rem;}
+/* Carrera */
+body.carrera .carrera-container { 
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
 
-/* =======================================
-   SECCIONES
-======================================= */
-section { padding:50px 10%; animation:fadeIn 1s ease-in;}
-section h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #e63946; display:inline-block; padding-bottom:5px;}
-section p, section ul { font-size:1rem; margin-bottom:15px;}
-ul { list-style:disc inside;}
+body.carrera .cards { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
 
-/* TABLAS */
-table { width:100%; border-collapse:collapse; margin-top:20px;}
-table th, table td { border:1px solid #ccc; padding:10px; text-align:center;}
-table th { background:#0d1b2a; color:#fff;}
-table tbody tr:hover { background:#f0f0f0; transform:scale(1.01); transition:all 0.3s;}
+body.carrera .card { 
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-normal);
+    overflow: hidden;
+    transition: transform var(--transition-normal) ease, 
+                box-shadow var(--transition-normal) ease;
+}
 
-/* GALERÍA */
-.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
-.gallery img { width:100%; height:auto; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s;}
-.gallery img:hover { transform:scale(1.1) rotate(1deg); box-shadow:0 15px 30px rgba(0,0,0,0.5);}
+body.carrera .card:hover { 
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--shadow-large);
+}
 
-/* FOOTER */
-footer { background:#0d1b2a; color:#fff; text-align:center; padding:20px; margin-top:50px;}
+body.carrera .card img { 
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-/* PÁGINAS ESPECÍFICAS */
-body.biografia section { background:#fff5e6; border-radius:10px; padding:40px 20px;}
-body.carrera .carrera-container { max-width:1100px; margin:40px auto; padding:20px; text-align:center;}
-body.carrera .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; padding:0 20px;}
-body.carrera .card { background:#fff; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s ease, box-shadow 0.3s ease;}
-body.carrera .card:hover { transform:translateY(-10px) scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.25);}
-body.carrera .card img { width:100%; height:180px; object-fit:cover;}
-body.carrera .card-content h3 { margin-top:10px; color:#333;}
-body.carrera .card-content p { padding:0 10px 15px; color:#555;}
+body.carrera .card-content h3 { 
+    margin-top: 10px;
+    color: #333;
+}
+
+body.carrera .card-content p { 
+    padding: 0 10px 15px;
+    color: #555;
+}
 
 /* =======================================
    ANIMACIONES
 ======================================= */
-@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
-@keyframes slideUp { from{transform:translateY(20px);opacity:0;} to{transform:translateY(0);opacity:1;} }
+@keyframes fadeIn { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
 
-/* =======================================
-   RESPONSIVE
-======================================= */
-@media(max-width:768px){
-nav ul { flex-direction:column; position:absolute; top:70px; right:0; background:#0d1b2a; width:200px; transform:translateX(100%); transition:0.3s; padding:20px; border-radius:0 0 0 10px;}
-nav ul.open { transform:translateX(0);}
-.menu-toggle { display:block;}
+@keyframes slideUp { 
+    from { 
+        transform: translateY(20px);
+        opacity: 0;
+    } 
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    } 
+}
 
-/* HERO RESPONSIVE */
-.hero { flex-direction:column; min-height:60vh; padding:40px 5%;}
-.hero-text h2 { font-size:2rem;}
-.hero-text p { font-size:1rem;}
+/* ===========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+============================================ */
+
+/* Tablets y dispositivos medianos (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navegación responsive */
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background: var(--color-primary);
+        width: 220px;
+        transform: translateX(100%);
+        transition: var(--transition);
+        padding: var(--spacing-md);
+        border-radius: 0 0 0 10px;
+        box-shadow: var(--shadow-large);
+        z-index: 2000;
+    }
+
+    nav ul.open {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero responsive */
+    .hero {
+        flex-direction: column;
+        min-height: 60vh;
+        padding: var(--spacing-md) 2%;
+    }
+
+    .hero img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes responsive generales - Tablets */
+@media (max-width: 768px) {
+    /* Tablas responsive */
+    section table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-small);
+    }
+
+    section table thead,
+    section table tbody,
+    section table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    section table th,
+    section table td {
+        font-size: 0.95rem;
+        padding: var(--spacing-sm);
+    }
+
+    /* Ajustes de sección */
+    section {
+        padding: var(--spacing-md) 3%;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Footer ajustado */
+    footer {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles y dispositivos pequeños */
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: calc(var(--spacing-sm) + 8px) 2%;
+    }
+
+    section table th,
+    section table td {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+/* Ajustes específicos para página de estadísticas */
+@media (max-width: 768px) {
+    .estadisticas section table {
+        margin: var(--spacing-md) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .estadisticas section {
+        padding: var(--spacing-sm);
+    }
 }

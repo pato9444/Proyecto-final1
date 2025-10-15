@@ -1,0 +1,62 @@
+// Sistema de grid responsive
+.grid {
+    display: grid;
+    gap: $spacing-md;
+
+    &--2-cols {
+        grid-template-columns: repeat(2, 1fr);
+        
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--3-cols {
+        grid-template-columns: repeat(3, 1fr);
+        
+        @media (max-width: $breakpoint-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--4-cols {
+        grid-template-columns: repeat(4, 1fr);
+        
+        @media (max-width: $breakpoint-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    &--gap-sm {
+        gap: $spacing-sm;
+    }
+
+    &--gap-lg {
+        gap: $spacing-lg;
+    }
+}
+
+// Clases de alineación para elementos grid
+.grid-center {
+    place-items: center;
+}
+
+.grid-start {
+    justify-items: start;
+}
+
+.grid-end {
+    justify-items: end;
+}

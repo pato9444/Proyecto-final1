@@ -1,0 +1,52 @@
+// Tipografía base
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $spacing-md;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: $font-size-xl;
+}
+
+h2 {
+    font-size: $font-size-lg * 1.5;
+}
+
+h3 {
+    font-size: $font-size-lg;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-base;
+}
+
+// Utilidades de texto
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-accent {
+    color: $color-accent;
+}
+
+// Listas
+ul, ol {
+    margin-bottom: $spacing-md;
+    padding-left: $spacing-lg;
+}
+
+// Enlaces destacados
+.link-accent {
+    color: $color-accent;
+    font-weight: bold;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
