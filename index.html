@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Federer - Inicio</title>
+    <meta name="description" content="Sitio web sobre Roger Federer, su biografía, carrera, estadísticas y galería.">
+    
+    <!-- SEO / Social -->
+    <meta property="og:title" content="Roger Federer - Sitio no oficial">
+    <meta property="og:description" content="Sitio web sobre Roger Federer, su biografía, carrera, estadísticas y galería.">
+    <meta property="og:image" content="images/federer-hero.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/federer-hero.jpg">
+</head>
+<body class="index">
+
+<header role="banner">
+    <h1>Roger Federer</h1>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav role="navigation" aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="carrera.html">Carrera</a></li>
+            <li><a href="estadisticas.html">Estadísticas</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<section class="hero" role="banner" aria-label="Sección principal" data-aos="fade-up">
+    <img src="images/federer-hero.jpg" alt="Roger Federer en acción durante un partido de tenis" loading="lazy">
+    <div class="hero-text">
+        <h2>El Maestro Suizo</h2>
+        <p>Roger Federer, nacido en Basilea, Suiza, es considerado uno de los mejores tenistas de todos los tiempos. Con un estilo elegante, récords históricos y una trayectoria llena de títulos, Federer ha marcado la historia del tenis mundial.</p>
+        <p>Con 103 títulos ATP y 20 Grand Slam, su legado sigue inspirando a generaciones.</p>
+        <p><a href="biografia.html">Conoce su historia</a></p>
+    </div>
+</section>
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; 2025 Sitio de Roger Federer</p>
+    <p>
+        <a href="index.html">Inicio</a> | 
+        <a href="biografia.html">Biografía</a> | 
+        <a href="carrera.html">Carrera</a> | 
+        <a href="estadisticas.html">Estadísticas</a> | 
+        <a href="galeria.html">Galería</a>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Federer - Biografía</title>
+    <meta name="description" content="Biografía completa de Roger Federer: infancia, juventud, familia y personalidad.">
+    
+    <meta property="og:title" content="Roger Federer - Biografía">
+    <meta property="og:description" content="Infancia, juventud, familia y personalidad de Roger Federer">
+    <meta property="og:image" content="images/federer-hero.jpg">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="biografia">
+
+<header role="banner">
+    <h1>Roger Federer</h1>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav role="navigation" aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html" class="activo">Biografía</a></li>
+            <li><a href="carrera.html">Carrera</a></li>
+            <li><a href="estadisticas.html">Estadísticas</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<section data-aos="fade-up" aria-labelledby="bio-title">
+    <h2 id="bio-title">Biografía</h2>
+    <p><strong>Nombre completo:</strong> Roger Federer</p>
+    <p><strong>Fecha de nacimiento:</strong> 8 de agosto de 1981</p>
+    <p><strong>Lugar de nacimiento:</strong> Basilea, Suiza</p>
+    <p><strong>Familia:</strong> Hijo de Robert y Lynette Federer. Casado con Mirka Vavrinec, con cuatro hijos.</p>
+    <p><strong>Infancia y juventud:</strong> Comenzó a jugar tenis a los 8 años. Mostró talento desde muy joven y participó en torneos juveniles destacados. Se caracterizó por su disciplina y ética de trabajo.</p>
+    <p><strong>Educación:</strong> Estudió en Suiza, combinando los estudios con entrenamientos de tenis intensivos.</p>
+    <p><strong>Personalidad:</strong> Reconocido por su humildad, fair play y comportamiento ejemplar dentro y fuera de la cancha.</p>
+</section>
+</main>
+
+<footer role="contentinfo">
+    <p>&copy; 2025 Sitio de Roger Federer</p>
+    <p>
+        <a href="index.html">Inicio</a> | 
+        <a href="biografia.html">Biografía</a> | 
+        <a href="carrera.html">Carrera</a> | 
+        <a href="estadisticas.html">Estadísticas</a> | 
+        <a href="galeria.html">Galería</a>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav ul');
+toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
+</script>
+
+</body>
+</html>

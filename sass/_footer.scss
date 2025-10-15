@@ -1,0 +1,13 @@
+footer {
+  background: $primary-color;
+  color: $white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+
+  a {
+    color: $white;
+    transition: $transition;
+    &:hover { color: $secondary-color; }
+  }
+}

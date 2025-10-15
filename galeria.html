@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roger Federer - Galería</title>
+<meta name="description" content="Galería de imágenes de Roger Federer, sus partidos y momentos más importantes.">
+
+<meta property="og:title" content="Roger Federer - Galería">
+<meta property="og:description" content="Galería de imágenes de Roger Federer">
+<meta property="og:image" content="images/federer-hero.jpg">
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="galeria">
+
+<header role="banner">
+<h1>Roger Federer</h1>
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+<nav role="navigation" aria-label="Menú principal">
+<ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="biografia.html">Biografía</a></li>
+    <li><a href="carrera.html">Carrera</a></li>
+    <li><a href="estadisticas.html">Estadísticas</a></li>
+    <li><a href="galeria.html" class="activo">Galería</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section data-aos="fade-up" aria-labelledby="galeria-title">
+<h2 id="galeria-title">Galería de Imágenes</h2>
+<p>Disfruta de algunos de los momentos más memorables de la carrera de Roger Federer:</p>
+
+<div class="gallery">
+<figure>
+<img src="images/federer1.jpg" alt="Roger Federer celebrando su título de Wimbledon 2017" loading="lazy">
+<figcaption>Wimbledon 2017</figcaption>
+</figure>
+<figure>
+<img src="images/federer2.jpg" alt="Roger Federer sirviendo en Australian Open 2018" loading="lazy">
+<figcaption>Australian Open 2018</figcaption>
+</figure>
+<figure>
+<img src="images/federer3.jpg" alt="Roger Federer entrenando en la cancha" loading="lazy">
+<figcaption>Entrenamiento</figcaption>
+</figure>
+<figure>
+<img src="images/federer4.jpg" alt="Roger Federer con trofeo del US Open" loading="lazy">
+<figcaption>Ganador del US Open</figcaption>
+</figure>
+<figure>
+<img src="images/federer5.jpg" alt="Roger Federer saludando al público" loading="lazy">
+<figcaption>Saludo al público</figcaption>
+</figure>
+</div>
+</section>
+</main>
+
+<footer role="contentinfo">
+<p>&copy; 2025 Sitio de Roger Federer</p>
+<p>
+<a href="index.html">Inicio</a> | 
+<a href="biografia.html">Biografía</a> | 
+<a href="carrera.html">Carrera</a> | 
+<a href="estadisticas.html">Estadísticas</a> | 
+<a href="galeria.html">Galería</a>
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav ul');
+toggle.addEventListener('click', () => { nav.classList.toggle('open'); });
+</script>
+
+</body>
+</html>
+
